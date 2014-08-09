@@ -1,0 +1,41 @@
+<svg version="1.1"
+     baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg">
+
+     <style>
+
+       p {
+
+        color: #0000ff;
+
+       }
+
+     </style>
+
+
+  <foreignObject class='blueText'>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+
+        <p>this paragraph is blue</p>
+
+      </div>
+  </foreignObject>
+
+  <script>
+
+    (function init(){
+    var mainEl = document.getElementsByTagName('foreignObject')[0];
+
+    var pwidth = mainEl.parentNode.offsetWidth;
+    var pheight = mainEl.parentNode.offsetHeight;
+
+    mainEl.setAttribute('width', pwidth);
+    mainEl.setAttribute('height', pheight);
+
+    })();
+
+
+
+  </script>
+
+</svg>
