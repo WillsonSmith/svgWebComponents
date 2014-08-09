@@ -10,7 +10,9 @@ function Component(name, source) {
     obj = document.createElement('object');
     obj.setAttribute('data', source);
     obj.setAttribute('type', 'image/svg+xml');
-    obj.style.width = "100%";
+    obj.setAttribute('width', "100%");
+    obj.setAttribute('height', "100%");
+
     onPage[i].appendChild(obj);
 
   }
