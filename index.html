@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-		<title></title>
-		<meta name='viewport' content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<meta name='apple-mobile-web-app-capable' content='yes' />
-		<meta charset='utf-8' />
-		<link rel='stylesheet' href='css/styles.css' />
+  <head>
+    <title></title>
+    <meta name='viewport' content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta charset='utf-8' />
+    <link rel='stylesheet' href='css/styles.css' />
 
-		<script>
+    <script>
 
-			document.registerElement('blue-paragraph');
+      function register() {//takes any number of element names and registers them
 
-		</script>
-	</head>
+        var l = arguments.length;
 
-	<body>
+        for (var i = 0; i < l; i++) {
 
-		<div id='container'>
+          document.registerElement(arguments[i]);
+
+        }
+
+      }
+      register('blue-paragraph');
+      
+    </script>
+  </head>
+
+  <body>
+
+    <div id='container'>
 
       <blue-paragraph></blue-paragraph>
 
       <p>this paragraph is not blue</p>
 
-		</div>
+    </div>
 
 
     <blue-paragraph></blue-paragraph>
@@ -36,5 +47,5 @@
 
   </script>
 
-	</body>
+  </body>
 </html>
