@@ -10,10 +10,11 @@
 
        }
 
+
      </style>
 
 
-  <foreignObject class='blueText'>
+  <foreignObject width="100%" height="100%">
       <div xmlns="http://www.w3.org/1999/xhtml">
 
         <p>this paragraph is blue</p>
@@ -23,14 +24,7 @@
 
   <script>
 
-    (function init(){
-    var mainEl = document.getElementsByTagName('foreignObject')[0];
-
-    var pwidth = mainEl.parentNode.offsetWidth;
-    var pheight = mainEl.parentNode.offsetHeight;
-
-    mainEl.setAttribute('width', pwidth);
-    mainEl.setAttribute('height', pheight);
+    (function init() {
 
     })();
 
