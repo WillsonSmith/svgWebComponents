@@ -1,0 +1,67 @@
+<svg version="1.1"
+     baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg">
+
+     <style>
+
+       div {
+
+        box-sizing: border-box;
+        padding: 5px;
+        width: 250px;
+        border: 1px solid black;
+
+       }
+
+
+     </style>
+
+
+  <foreignObject width="100%" height="100%">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+
+        <p>this paragraph is blue</p>
+
+      </div>
+  </foreignObject>
+
+  <script>
+
+    (function init() {
+
+      function Connect(method, location) {
+
+        var request = new XMLHttpRequest(),
+            response;
+
+        request.open(method, location, false);
+        request.send();
+
+        if (request.status === 200) {
+
+            response = request.responseText;
+
+        }
+
+        this.respond = function() {
+
+            return response;
+
+        };
+
+      }
+
+
+      var quoteConnect = new Connect("GET", "js/futurama.js"),
+          quotesArray = JSON.parse(quoteConnect.respond()),
+          quotesLength = quotesArray.length,
+          usedQuote = quotesArray[Math.floor(Math.random() * (quotesLength))];
+
+      usedQuote = usedQuote.replace(/(?:\r\n|\r|\n)/g, "<br />");
+      document.querySelector('div').innerHTML = usedQuote;
+
+    })();
+
+  </script>
+
+</svg>

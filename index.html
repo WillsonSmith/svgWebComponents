@@ -8,22 +8,6 @@
     <meta charset='utf-8' />
     <link rel='stylesheet' href='css/styles.css' />
 
-    <!--<script>
-
-      function register() {//takes any number of element names and registers them
-
-        var l = arguments.length;
-
-        for (var i = 0; i < l; i++) {
-
-          document.registerElement(arguments[i]);
-
-        }
-
-      }
-      register('blue-paragraph');
-      
-    </script>-->
   </head>
 
   <body>
@@ -40,10 +24,14 @@
     <blue-paragraph></blue-paragraph>
 
 
+  <code>&lt;futurama-quotes&gt;</code>
+  <futurama-quotes></futurama-quotes>
+
   <script src="js/Component.js"></script>
   <script>
 
     Component('blue-paragraph', 'component.svg');
+    Component('futurama-quotes', 'futurama-quotes.svg');
 
   </script>
 
